@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SearchHub 無料版 ダウンロード</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; padding: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background: #f8fafc; color: #333; }
+        .container { width: 100%; max-width: 600px; margin: 0 auto; background: #fff; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+        
+        .header { background: #1a365d; color: white; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .header h1 { margin: 0; font-size: 18px; font-weight: 900; }
+        
+        .content { padding: 20px; }
+        
+        .video-wrapper { position: relative; width: 100%; padding-top: 56.25%; margin-bottom: 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background: #000; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        
+        .notice-box { font-size: 13px; color: #2b6cb0; background: #ebf8ff; border: 1px solid #bee3f8; border-radius: 8px; padding: 15px; margin-bottom: 24px; line-height: 1.6; font-weight: bold; }
+        
+        /* すりガラス風＆3Dカード */
+        .card {
+            border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); }
+        .card-title { font-size: 16px; font-weight: 900; margin-bottom: 10px; color: #2d3748; display:flex; align-items:center; gap:8px;}
+        .card-desc { font-size: 13px; color: #718096; margin-bottom: 15px; line-height: 1.5; font-weight: bold;}
+        
+        .btn-3d {
+            display: flex; align-items: center; justify-content: center; gap:8px;
+            width: 100%; text-align: center; color: #fff; text-decoration: none;
+            padding: 12px 0; border-radius: 8px; font-size: 14px; font-weight: bold;
+            transition: all 0.1s; position: relative; top: 0;
+        }
+        .btn-3d:active { top: 4px; box-shadow: 0 0 0 transparent !important; }
+        
+        .bg-mobile { background: #8e44ad; box-shadow: 0 4px 0 #6c3483; }
+        .bg-chrome { background: #1a73e8; box-shadow: 0 4px 0 #1256b3; }
+        .bg-sheet { background: #0f9d58; box-shadow: 0 4px 0 #0b7340; }
+        .bg-timer { background: #2c3e50; box-shadow: 0 4px 0 #1a252f; }
+        .bg-youtube { background: #e52d27; box-shadow: 0 4px 0 #b3211c; padding: 10px; font-size:12px;}
+
+        .manual-item { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px dashed #e2e8f0; }
+        .manual-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        .manual-name { font-size: 13px; font-weight: bold; color: #2d3748; display:flex; align-items:center; gap:6px;}
+
+        /* アコーディオン（開閉式Q&A） */
+        .qa-container { background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; margin-top:20px;}
+        .qa-item { border-bottom: 1px solid #e2e8f0; }
+        .qa-item:last-child { border-bottom: none; }
+        .qa-btn {
+            width: 100%; text-align: left; background: #f8fafc; border: none; padding: 16px;
+            font-size: 14px; font-weight: bold; color: #1a365d; cursor: pointer;
+            display: flex; justify-content: space-between; align-items: center; outline: none;
+        }
+        .qa-btn i { transition: transform 0.3s; color:#a0aec0;}
+        .qa-btn.active i { transform: rotate(180deg); color:#1a365d;}
+        .qa-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #fff; }
+        .qa-inner { padding: 16px; font-size: 13px; color: #4a5568; line-height: 1.6; font-weight:bold; border-left: 3px solid #1a73e8; margin: 0 16px 16px 16px;}
+        
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.5s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SearchHub 無料版 セットアップ</h1>
+        </div>
+        
+        <div class="content">
+            <div class="fade-in">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/UOP-Rsjh_kE" title="SearchHub Mobile Liteで出来ること" allowfullscreen></iframe>
+                </div>
+
+                <div class="notice-box">
+                    当システムは、スマホ用Webアプリとパソコン用スプレッドシートを組み合わせて使用するハイブリッド仕様です。<br>
+                    以下のツールをすべてダウンロードし、解説動画をご覧の上、設定を行ってください。<br>
+                    <span style="color: #e52d27;">※Keepaの契約が別途必要です</span>
+                </div>
+            </div>
+
+            <div class="card fade-in">
+                <div class="card-title"><i class="fas fa-mobile-alt" style="color:#8e44ad;"></i> Mobile Lite (スマホ版)</div>
+                <div class="card-desc">外出先でのダッシュボード確認や仕入れ登録ができるスマホ専用画面です。ホーム画面に追加してご利用ください。<br>
+                <!-- 💡 注意書き追加！ -->
+                <span style="color:#e53e3e; font-weight:bold; font-size:12px; margin-top:4px; display:inline-block;">※既に導入済みの方は不要です</span></div>
+                <a href="https://searchhubpro.github.io/searchhub-mobile-lite/" target="_blank" class="btn-3d bg-mobile dl-btn-mobile"><i class="fas fa-external-link-alt"></i> スマホに導入する</a>
+            </div>
+
+            <div class="card fade-in">
+                <div class="card-title"><i class="fab fa-chrome" style="color:#1a73e8;"></i> 自動パトロール 拡張機能</div>
+                <div class="card-desc">ストアから、自動パトロール用の拡張機能をブラウザに追加してください。（※PC専用）</div>
+                <a href="https://chromewebstore.google.com/detail/searchhublite/nddmiedncgckcgigeoiagnpamfohoemf?authuser=0&hl=ja" target="_blank" class="btn-3d bg-chrome"><i class="fas fa-puzzle-piece"></i> Chromeに追加する</a>
+            </div>
+
+            <div class="card fade-in">
+                <div class="card-title"><i class="fas fa-table" style="color:#0f9d58;"></i> 専用スプレッドシート</div>
+                <div class="card-desc">ご自身のGoogleドライブにコピーして初期設定を行ってください。</div>
+                <a href="https://docs.google.com/spreadsheets/d/1EZWqQu6gfBKDwQJxpf5uZpN24oah7Zqm3eu0zKNpsec/copy" target="_blank" class="btn-3d bg-sheet"><i class="fas fa-copy"></i> シートをコピーする</a>
+            </div>
+
+            <div class="card fade-in">
+                <div class="card-title"><i class="fas fa-moon" style="color:#2c3e50;"></i> PCスリープタイマー (おまけ)</div>
+                <div class="card-desc">自動パトロール終了後に、PCを自動でスリープ状態にするための便利な補助ツールです。</div>
+                <a href="https://drive.google.com/file/d/14FYdbyWOqiuzltOU2rG7a05EQCBaVQy1/view?usp=sharing" target="_blank" class="btn-3d bg-timer"><i class="fas fa-file-archive"></i> ZIPをダウンロード</a>
+            </div>
+
+            <div class="card fade-in">
+                <div class="card-title"><i class="fas fa-book-open"></i> 設定マニュアル動画</div>
+                
+                <div class="manual-item">
+                    <div class="manual-name"><i class="fas fa-mobile-alt"></i> Mobile Lite 導入方法</div>
+                    <a href="https://youtu.be/8BhufCGXahU" target="_blank" class="btn-3d bg-youtube"><i class="fab fa-youtube"></i> 動画を見る</a>
+                </div>
+                <div class="manual-item">
+                    <div class="manual-name"><i class="fab fa-chrome"></i> 拡張機能 導入方法</div>
+                    <a href="https://youtu.be/-T4sPx3IWo0" target="_blank" class="btn-3d bg-youtube"><i class="fab fa-youtube"></i> 動画を見る</a>
+                </div>
+                <div class="manual-item">
+                    <div class="manual-name"><i class="fas fa-table"></i> 専用シート 導入方法</div>
+                    <a href="https://youtu.be/j4pmPJoiazg" target="_blank" class="btn-3d bg-youtube"><i class="fab fa-youtube"></i> 動画を見る</a>
+                </div>
+                <div class="manual-item">
+                    <div class="manual-name"><i class="fas fa-moon"></i> スリープタイマー 導入方法</div>
+                    <a href="https://youtu.be/PP6Wz8RsMg8" target="_blank" class="btn-3d bg-youtube"><i class="fab fa-youtube"></i> 動画を見る</a>
+                </div>
+                <div class="manual-item">
+                    <div class="manual-name"><i class="fas fa-play-circle"></i> Mobile Lite 機能説明</div>
+                    <a href="https://youtu.be/wmobhtqF5-M" target="_blank" class="btn-3d bg-youtube"><i class="fab fa-youtube"></i> 動画を見る</a>
+                </div>
+            </div>
+
+            <h2 style="text-align:center; font-size:18px; color:#1a365d; margin-top:40px; margin-bottom:0;" class="fade-in"><i class="fas fa-question-circle"></i> よくあるご質問</h2>
+            
+            <div class="qa-container fade-in">
+                <div class="qa-item">
+                    <button class="qa-btn">❓ 本当に無料で使えるの？ <i class="fas fa-chevron-down"></i></button>
+                    <div class="qa-content">
+                        <div class="qa-inner">はい、無料版（Lite）は一切費用かかりません！初期設定さえすれば、ずっと無料でリサーチやパトロール機能をお試しいただけます。</div>
+                    </div>
+                </div>
+                <div class="qa-item">
+                    <button class="qa-btn">❓ スマホだけで完結する？ <i class="fas fa-chevron-down"></i></button>
+                    <div class="qa-content">
+                        <div class="qa-inner">当システムは「スマホ用Webアプリ」と「パソコン用スプレッドシート」を連動させて使うハイブリッド仕様です。そのため、設定や自動パトロールにはパソコンが必要ですが、外出先での確認や仕入れ登録はスマホから爆速で行えます！</div>
+                    </div>
+                </div>
+                <div class="qa-item">
+                    <button class="qa-btn">❓ Keepaの契約は絶対に必要？ <i class="fas fa-chevron-down"></i></button>
+                    <div class="qa-content">
+                        <div class="qa-inner">はい、Amazonのデータを正確に解析・パトロールするため、有料版のKeepa契約（APIが使える状態）が別途必要になります。</div>
+                    </div>
+                </div>
+                <div class="qa-item">
+                    <button class="qa-btn">❓ 無料版とPRO版の違いは何？ <i class="fas fa-chevron-down"></i></button>
+                    <div class="qa-content">
+                        <div class="qa-inner">無料版は一部の機能制限（仕入先の固定など）がありますが、パトロールや仕入れ登録など基本機能はバッチリ使えます。PRO版にアップグレードすると、全ロックが解除され、売上・利益のリアルタイム自動集計なども完全解放されます！</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        // フワッと表示
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        setTimeout(() => { document.querySelectorAll('.fade-in').forEach((el, index) => { if(index < 2) el.classList.add('visible'); }); }, 100);
+
+        // アコーディオン機能
+        document.querySelectorAll('.qa-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
+
+        // スマホに導入するボタンを押した時、裏でこっそりダウンロード数をカウントする処理
+        const COUNTER_GAS_URL = "https://script.google.com/macros/s/AKfycbzqAlLUYIiBL3xCmB6iBArALrLxnP6yvtrEHEdpA5L0Up-6pNxKDIE-ZkXf5Mo4sktkdA/exec";
+        document.querySelector('.dl-btn-mobile')?.addEventListener('click', () => {
+            if(!COUNTER_GAS_URL.includes("【")) fetch(COUNTER_GAS_URL + "?action=download").catch(e=>{});
+        });
+    </script>
+</body>
+</html>
